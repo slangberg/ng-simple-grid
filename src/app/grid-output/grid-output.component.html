@@ -1,0 +1,12 @@
+<div class="grid-co">
+  <ng-container *ngFor="let item of listArray; let i=index">
+    <div *ngIf="i %divider == 0"  [ngClass]="{'grid-row':true, 'no-padding':i == lastRow}">
+      <ng-container *ngFor="let item of colArray; let in=index">
+        <div [ngClass]="colClasses" [ngStyle]="colStyle">
+          <ng-template *ngIf="listArray[i+in]" [ngTemplateOutlet]="templ" [ngOutletContext]="{index: i+in,rowindex:in, item:listArray[i+in]}">
+          </ng-template>
+        </div>
+      </ng-container>
+    </div>
+  </ng-container>
+</div>
