@@ -1,14 +1,55 @@
-<h1>
-  {{title}}
-</h1>
-<form>
-  <label>Colums</label>
-  <input type="number" name="Colums" [(ngModel)]="divderCount" min="1" max="12">
-  <label>Use Class</label>
-  <input type="checkbox"  [(ngModel)]="isPercent" name="isPercent">
-</form>
-<grid-output [divider]="divderCount" [gridlist]="sampleList" [percentage]="isPercent">
-  <ng-template let-item="item" let-index="index">
-    <div class="profile-form-heading">Index: {{index+1}}</div>
-  </ng-template>
-</grid-output>
+<header>
+  <h1>Angular 4 Simple Grid</h1>
+</header>
+<div class="demo-page">
+  <form class="demo-controls">
+    <div class="control-row">
+      <label>Colums</label>
+      <input type="number" name="Colums" [(ngModel)]="divderCount" min="1" max="12">
+    </div>
+    <div class="control-row">
+      <input type="checkbox" [(ngModel)]="usingColConfig" name="userColConfig" (click)="usesColConfig()">
+      <label>Use Coloum Config</label>
+    </div>
+    <div class="control-row">
+      <input type="checkbox" [(ngModel)]="usingGridStyle" name="usingGridStyle" (click)="usesGridStyle()">
+      <label>Use Grid Style Config</label>
+    </div>
+    <div class="control-row">
+      <input type="checkbox" [(ngModel)]="usingColStyle" name="usingColStyle" (click)="useSampleColStyle()">
+      <label>Use Column Style Config</label>
+    </div>
+    <div class="control-row">
+      <input type="checkbox" [(ngModel)]="usingRowStyle" name="usingRowStyle" (click)="useSampleRowStyle()">
+      <label>Use Row Style Config</label>
+    </div>
+    <div class="control-row">
+        <input type="checkbox" [(ngModel)]="usingClassConfig" name="usingClassConfig" (click)="useClassConfig()">
+      <label>Use Grid Class Config</label>
+    </div>
+
+  </form>
+  <div class="grid-holder clr">
+    <pre>
+        {{sampleConfigObject | json}}
+    </pre>
+    <div class="demo-container">
+      <simple-grid
+      [col-config]="sampleConfigObject.colConfig"
+      [col-count]="divderCount"
+      [source-list]="sampleList"
+      [use-percent]="isPercent"
+      [grid-style-config]="sampleConfigObject.gridStyle"
+      [col-style]="sampleConfigObject.colStyle"
+      [row-style]="sampleConfigObject.rowStyle"
+      [classes-config]="sampleConfigObject.classConfig"
+      (onItemClick)="onClickItem($event)"
+      >
+        <ng-template let-item="item" let-index="index">
+          Item
+          <!-- <sample-cell [item]="item"></sample-cell> -->
+        </ng-template>
+      </simple-grid>
+    </div>
+  </div>
+</div>

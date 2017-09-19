@@ -1,0 +1,14 @@
+<div [ngClass]="classConfig.container">
+  <ng-container *ngFor="let item of listArray; let i=index">
+    <div *ngIf="i %divider == 0"  [ngClass]="getRowClasses(i)" [ngStyle]="getRowStyle(i)">
+      <ng-container *ngFor="let item of colArray; let in=index">
+        <div [ngClass]="getColClasses(in)" [ngStyle]="getColStyle(in)" (click)="itemClicked(listArray[i+in], i+in)">
+          <ng-container
+          *ngIf="listArray[i+in]"
+          [ngTemplateOutlet]="genTemplate(in)" [ngOutletContext]="{index: i+in,rowindex:in, item:listArray[i+in]}">
+          </ng-container>
+        </div>
+      </ng-container>
+    </div>
+  </ng-container>
+</div>

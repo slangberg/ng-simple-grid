@@ -1,0 +1,61 @@
+
+.simple-grid-container,
+.simple-grid-container .simple-grid-row
+.simple-grid-container .simple-grid-col {
+  box-sizing: border-box;
+}
+
+.simple-grid-row {
+  box-sizing: border-box;
+}
+
+.simple-grid-row:after {
+   visibility: hidden;
+   display: block;
+   font-size: 0;
+   content: " ";
+   clear: both;
+   height: 0;
+ }
+
+.simple-grid-col {
+  float: left;
+  box-sizing: border-box;
+}
+
+.simple-grid-container .simple-grid-row:last-child {
+  padding-bottom: 0px!important;
+}
+
+.simple-grid-col + .simple-grid-col {
+
+}
+
+.half {
+  width: 50%;
+}
+
+.three-four {
+  width: 75%;
+}
+
+.one-three,
+.third {
+  width: 33.33%;
+}
+
+.two-three {
+  width:66.67%;
+}
+
+.one-four {
+  width: 25%;
+}
+
+.two-four {
+  width: 50%;
+}
+
+.full-width {
+  width: 100%;
+}
