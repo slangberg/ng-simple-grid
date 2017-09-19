@@ -6,7 +6,7 @@ The its core the simple-grid component consumes any Array in the form of the `so
 ```html
 <simple-grid>
   <ng-template let-item="item" let-index="index">
-    <!—- item and index properties accessible here -—>
+    <!-- item and index properties accessible here -->
   </ng-template>
 </simple-grid>
 ```
@@ -58,7 +58,7 @@ The grid can be configured to not set express widths and instead apply user sele
 
 ### `col-config`
 **Type:**
-```javascript
+```TypeScript
 [{ class?: string | string[], percent?:number, style?:Object}]
 ```
 <br>   
@@ -69,12 +69,12 @@ The grid can be configured to not set express widths and instead apply user sele
 
 ### `classes-config`
 **Type:**
-```javascript
+```TypeScript
   {container?:string | string[], row?:string | string[], col?:string | string[]}
 ```
 <br>   
 **Default:**
-```javascript
+```TypeScript
   {container:'simple-grid-container',row:'simple-grid-row',col:'simple-grid-col'}
 ```
 <br>
