@@ -5,10 +5,12 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import {SimpleGridModule} from './simple-grid/simple-grid.module';
 import {SampleCellComponent} from './sample-cell/sample-cell.component';
+import { OutputTrimPipe } from './output-trim.pipe';
 @NgModule({
   declarations: [
     AppComponent,
-    SampleCellComponent
+    SampleCellComponent,
+    OutputTrimPipe
   ],
   imports: [
     BrowserModule,

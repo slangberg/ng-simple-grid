@@ -8,6 +8,11 @@ h1 {
   font-size: 25px;
 }
 
+h2 {
+  font-family: 'Fjalla One', sans-serif;
+  margin:5px 0;
+  font-size: 17px;
+}
 .clr:after {
    visibility: hidden;
    display: block;
@@ -22,7 +27,6 @@ header {
   padding: 10px;
   border-bottom: 3px solid #8e8e8e;
   box-shadow:5px 0px 5px rgba(0,0,0,.4);
-  margin-bottom:5px;
 }
 
 
@@ -31,7 +35,6 @@ header {
   border: 3px solid #8e8e8e;
   padding: 4px;
   margin: 10px;
-  /*box-shadow:inset 0px 0px 2px rgba(0,0,0,.4);*/
 }
 
 
@@ -42,7 +45,7 @@ header {
 
 .demo-controls {
   float: left;
-  width: 250px;
+  width: 300px;
   min-height: calc(100vh - 31px);
   padding: 10px;
   label{
@@ -52,6 +55,9 @@ header {
   .control-row {
     padding-bottom: 5px;
   }
+  pre {
+    border: 1px solid #8e8e8e;
+  }
   code {
     tab-width: 2;
     white-space: pre-wrap;
@@ -60,7 +66,8 @@ header {
 }
 
 .grid-holder {
+  border-left: 1px solid #8e8e8e;
   float: left;
-  // transform: translateX(300px);
-  width:calc(100% - 250px)
+  width:calc(100% - 300px);
+  min-height: calc(100vh - 31px);
 }

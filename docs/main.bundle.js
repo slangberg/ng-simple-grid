@@ -20,7 +20,7 @@ webpackEmptyAsyncContext.id = "../../../../../src/$$_gendir lazy recursive";
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<header>\n  <h1>Angular 4 Simple Grid</h1>\n</header>\n<div class=\"demo-page\">\n  <form class=\"demo-controls\">\n    <div class=\"control-row\">\n      <label>Colums</label>\n      <input type=\"number\" name=\"Colums\" [(ngModel)]=\"divderCount\" min=\"1\" max=\"12\">\n    </div>\n    <div class=\"control-row\">\n      <input type=\"checkbox\" [(ngModel)]=\"usingColConfig\" name=\"userColConfig\" (click)=\"usesColConfig()\">\n      <label>Use Coloum Config</label>\n    </div>\n    <div class=\"control-row\">\n      <input type=\"checkbox\" [(ngModel)]=\"usingGridStyle\" name=\"usingGridStyle\" (click)=\"usesGridStyle()\">\n      <label>Use Grid Style Config</label>\n    </div>\n    <div class=\"control-row\">\n      <input type=\"checkbox\" [(ngModel)]=\"usingColStyle\" name=\"usingColStyle\" (click)=\"useSampleColStyle()\">\n      <label>Use Column Style Config</label>\n    </div>\n    <div class=\"control-row\">\n      <input type=\"checkbox\" [(ngModel)]=\"usingRowStyle\" name=\"usingRowStyle\" (click)=\"useSampleRowStyle()\">\n      <label>Use Row Style Config</label>\n    </div>\n    <div class=\"control-row\">\n        <input type=\"checkbox\" [(ngModel)]=\"usingClassConfig\" name=\"usingClassConfig\" (click)=\"useClassConfig()\">\n      <label>Use Grid Class Config</label>\n    </div>\n\n  </form>\n  <div class=\"grid-holder clr\">\n    <pre>\n        {{sampleConfigObject | json}}\n    </pre>\n    <div class=\"demo-container\">\n      <simple-grid\n      [col-config]=\"sampleConfigObject.colConfig\"\n      [col-count]=\"divderCount\"\n      [source-list]=\"sampleList\"\n      [use-percent]=\"isPercent\"\n      [grid-style-config]=\"sampleConfigObject.gridStyle\"\n      [col-style]=\"sampleConfigObject.colStyle\"\n      [row-style]=\"sampleConfigObject.rowStyle\"\n      [classes-config]=\"sampleConfigObject.classConfig\"\n      (onItemClick)=\"onClickItem($event)\"\n      >\n        <ng-template let-item=\"item\" let-index=\"index\">\n          Item\n          <!-- <sample-cell [item]=\"item\"></sample-cell> -->\n        </ng-template>\n      </simple-grid>\n    </div>\n  </div>\n</div>\n"
+module.exports = "<header>\n  <h1>Angular 4 Simple Grid</h1>\n</header>\n<div class=\"demo-page\">\n  <form class=\"demo-controls\">\n    <div class=\"control-row\">\n      <label>Colums</label>\n      <input type=\"number\" name=\"Colums\" [(ngModel)]=\"divderCount\" min=\"1\" max=\"12\">\n    </div>\n    <div class=\"control-row\">\n      <input type=\"checkbox\" [(ngModel)]=\"usingColConfig\" name=\"userColConfig\" (click)=\"usesColConfig()\">\n      <label>Use Coloum Config</label>\n    </div>\n    <div class=\"control-row\">\n      <input type=\"checkbox\" [(ngModel)]=\"usingGridStyle\" name=\"usingGridStyle\" (click)=\"usesGridStyle()\">\n      <label>Use Grid Style Config</label>\n    </div>\n    <div class=\"control-row\">\n      <input type=\"checkbox\" [(ngModel)]=\"usingColStyle\" name=\"usingColStyle\" (click)=\"useSampleColStyle()\">\n      <label>Use Column Style Config</label>\n    </div>\n    <div class=\"control-row\">\n      <input type=\"checkbox\" [(ngModel)]=\"usingRowStyle\" name=\"usingRowStyle\" (click)=\"useSampleRowStyle()\">\n      <label>Use Row Style Config</label>\n    </div>\n    <div class=\"control-row\">\n        <input type=\"checkbox\" [(ngModel)]=\"usingClassConfig\" name=\"usingClassConfig\" (click)=\"useClassConfig()\">\n      <label>Use Grid Class Config</label>\n    </div>\n    <h2 class=\"config-head\">Active Configs</h2>\n    <pre>\n      <code>\n        {{sampleConfigObject | json | outputTrim}}\n      </code>\n    </pre>\n  </form>\n  <div class=\"grid-holder clr\">\n\n    <div class=\"demo-container\">\n      <simple-grid\n      [col-config]=\"sampleConfigObject.colConfig\"\n      [col-count]=\"divderCount\"\n      [source-list]=\"sampleList\"\n      [use-percent]=\"isPercent\"\n      [grid-style-config]=\"sampleConfigObject.gridStyle\"\n      [col-style]=\"sampleConfigObject.colStyle\"\n      [row-style]=\"sampleConfigObject.rowStyle\"\n      [classes-config]=\"sampleConfigObject.classConfig\"\n      (onItemClick)=\"onClickItem($event)\"\n      >\n        <ng-template let-item=\"item\" let-index=\"index\">\n          <sample-cell [item]=\"item\"></sample-cell>\n        </ng-template>\n      </simple-grid>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -32,7 +32,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "* {\n  box-sizing: border-box; }\n\nh1 {\n  font-family: 'Fjalla One', sans-serif;\n  margin: 0;\n  font-size: 25px; }\n\n.clr:after {\n  visibility: hidden;\n  display: block;\n  font-size: 0;\n  content: \" \";\n  clear: both;\n  height: 0; }\n\nheader {\n  background: #ededed;\n  padding: 10px;\n  border-bottom: 3px solid #8e8e8e;\n  box-shadow: 5px 0px 5px rgba(0, 0, 0, 0.4);\n  margin-bottom: 5px; }\n\n.demo-container {\n  border-radius: 5px;\n  border: 3px solid #8e8e8e;\n  padding: 4px;\n  margin: 10px;\n  /*box-shadow:inset 0px 0px 2px rgba(0,0,0,.4);*/ }\n\n.demo-page {\n  position: relative;\n  width: 100%; }\n\n.demo-controls {\n  float: left;\n  width: 250px;\n  min-height: calc(100vh - 31px);\n  padding: 10px; }\n  .demo-controls label {\n    font-weight: bold;\n    font-size: 12px; }\n  .demo-controls .control-row {\n    padding-bottom: 5px; }\n  .demo-controls code {\n    tab-width: 2;\n    white-space: pre-wrap; }\n\n.grid-holder {\n  float: left;\n  width: calc(100% - 250px); }\n", ""]);
+exports.push([module.i, "* {\n  box-sizing: border-box; }\n\nh1 {\n  font-family: 'Fjalla One', sans-serif;\n  margin: 0;\n  font-size: 25px; }\n\nh2 {\n  font-family: 'Fjalla One', sans-serif;\n  margin: 5px 0;\n  font-size: 17px; }\n\n.clr:after {\n  visibility: hidden;\n  display: block;\n  font-size: 0;\n  content: \" \";\n  clear: both;\n  height: 0; }\n\nheader {\n  background: #ededed;\n  padding: 10px;\n  border-bottom: 3px solid #8e8e8e;\n  box-shadow: 5px 0px 5px rgba(0, 0, 0, 0.4); }\n\n.demo-container {\n  border-radius: 5px;\n  border: 3px solid #8e8e8e;\n  padding: 4px;\n  margin: 10px; }\n\n.demo-page {\n  position: relative;\n  width: 100%; }\n\n.demo-controls {\n  float: left;\n  width: 300px;\n  min-height: calc(100vh - 31px);\n  padding: 10px; }\n  .demo-controls label {\n    font-weight: bold;\n    font-size: 12px; }\n  .demo-controls .control-row {\n    padding-bottom: 5px; }\n  .demo-controls pre {\n    border: 1px solid #8e8e8e; }\n  .demo-controls code {\n    tab-width: 2;\n    white-space: pre-wrap; }\n\n.grid-holder {\n  border-left: 1px solid #8e8e8e;\n  float: left;\n  width: calc(100% - 300px);\n  min-height: calc(100vh - 31px); }\n", ""]);
 
 // exports
 
@@ -157,17 +157,45 @@ var AppComponent = (function () {
             {
                 "_id": "5976a13f6653386837489bb2",
                 "index": 0,
-                "picture": "../assets/test.jpg",
+                "picture": "http://lorempixel.com/400/200/?random=0",
                 "age": 38,
                 "name": "Gross Casey"
             },
             {
                 "_id": "5976a13f0941fa1842865e88",
                 "index": 1,
-                "picture": "../assets/test.jpg",
+                "picture": "http://lorempixel.com/400/200/?random=1",
                 "age": 37,
                 "name": "Nash Bruce"
             },
+            {
+                "_id": "5976a13f8364ee70b2b5555e",
+                "index": 2,
+                "picture": "http://lorempixel.com/400/200/?random=2",
+                "age": 31,
+                "name": "Melba Estrada"
+            },
+            {
+                "_id": "5976a13fab2cdc560a39a7cc",
+                "index": 3,
+                "picture": "http://lorempixel.com/400/200/?random=3",
+                "age": 21,
+                "name": "Cheri Mosley"
+            },
+            {
+                "_id": "5976a13f8790d513716e168e",
+                "index": 4,
+                "picture": "http://lorempixel.com/400/200/?random=4",
+                "age": 28,
+                "name": "Ofelia Aguirre"
+            },
+            {
+                "_id": "5976a13fce491181e33b0686",
+                "index": 5,
+                "picture": "http://lorempixel.com/400/200/?random=5",
+                "age": 28,
+                "name": "Juliette Booth"
+            }
         ];
     }
     return AppComponent;
@@ -197,12 +225,14 @@ AppComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__simple_grid_simple_grid_module__ = __webpack_require__("../../../../../src/app/simple-grid/simple-grid.module.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__sample_cell_sample_cell_component__ = __webpack_require__("../../../../../src/app/sample-cell/sample-cell.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__output_trim_pipe__ = __webpack_require__("../../../../../src/app/output-trim.pipe.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -219,7 +249,8 @@ AppModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["L" /* NgModule */])({
         declarations: [
             __WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */],
-            __WEBPACK_IMPORTED_MODULE_6__sample_cell_sample_cell_component__["a" /* SampleCellComponent */]
+            __WEBPACK_IMPORTED_MODULE_6__sample_cell_sample_cell_component__["a" /* SampleCellComponent */],
+            __WEBPACK_IMPORTED_MODULE_7__output_trim_pipe__["a" /* OutputTrimPipe */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -260,6 +291,38 @@ var bootstrapConfig = {
 /***/ (function(module, exports) {
 
 //# sourceMappingURL=interfaces.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/output-trim.pipe.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return OutputTrimPipe; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var OutputTrimPipe = (function () {
+    function OutputTrimPipe() {
+    }
+    OutputTrimPipe.prototype.transform = function (value, args) {
+        console.log(value);
+        return value.slice(1, -1);
+    };
+    return OutputTrimPipe;
+}());
+OutputTrimPipe = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["V" /* Pipe */])({
+        name: 'outputTrim'
+    })
+], OutputTrimPipe);
+
+//# sourceMappingURL=output-trim.pipe.js.map
 
 /***/ }),
 
