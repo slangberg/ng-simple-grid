@@ -70,12 +70,20 @@ The grid can be configured to not set express widths and instead apply user sele
 ### `classes-config`
 **Type:**
 ```typescript
-  {container?:string | string[], row?:string | string[], col?:string | string[]}
+  {
+    container?:string | string[],
+    row?:string | string[],
+    col?:string | string[]
+  }
 ```
 <br>   
 **Default:**
 ```typescript
-  {container:'simple-grid-container',row:'simple-grid-row',col:'simple-grid-col'}
+  {
+    container:'simple-grid-container',
+    row:'simple-grid-row',
+    col:'simple-grid-col'
+  }
 ```
 <br>
 **Description:** This object can be used to over wright simple grid's default container, row and column classes                
