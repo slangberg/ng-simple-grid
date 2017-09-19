@@ -7,7 +7,6 @@
     {
       "root": "src",
       "outDir": "docs",
-      "deployUrl":"https://slangberg.github.io/ng-simple-grid/",
       "assets": [
         "assets",
         "favicon.ico"
