@@ -58,7 +58,7 @@ The grid can be configured to not set express widths and instead apply user sele
 
 ### `col-config`
 **Type:**
-```typescript
+```javascript
 [{ class?: string | string[], percent?:number, style?:Object}]
 ```
 <br>   
@@ -68,9 +68,15 @@ The grid can be configured to not set express widths and instead apply user sele
 
 
 ### `classes-config`
-**Type:**`{container?:string | string[], row?:string | string[], col?:string | string[]}`
+**Type:**
+```javascript
+  {container?:string | string[], row?:string | string[], col?:string | string[]}
+```
 <br>   
-**Default:** `{container:'simple-grid-container',row:'simple-grid-row',col:'simple-grid-col'}`
+**Default:**
+```javascript
+  {container:'simple-grid-container',row:'simple-grid-row',col:'simple-grid-col'}
+```
 <br>
 **Description:** This object can be used to over wright simple grid's default container, row and column classes                
 

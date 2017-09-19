@@ -6,6 +6,7 @@ h1 {
   font-family: 'Fjalla One', sans-serif;
   margin: 0;
   font-size: 25px;
+  float: left;
 }
 
 h2 {
@@ -29,7 +30,14 @@ header {
   box-shadow:5px 0px 5px rgba(0,0,0,.4);
 }
 
-
+.git-link {
+  font-family: 'Fjalla One', sans-serif;
+  display: inline-block;
+  float: right;
+  color: #000!important;
+  font-size: 25px;
+  text-decoration: none;
+}
 .demo-container {
   border-radius: 5px;
   border: 3px solid #8e8e8e;
