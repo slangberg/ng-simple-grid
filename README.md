@@ -1,4 +1,4 @@
-#Angular 4 Simple Grid
+# Angular 4 Simple Grid
 
 
 [See Project Demo here](https://slangberg.github.io/ng-simple-grid/)
@@ -69,7 +69,7 @@ The grid can be configured to not set express widths and instead apply user sele
   style?:Object
 }]
 ```
-<br>   
+
 **Default:** `null`
 <br>
 **Description:** The column config is an array of IColConfig objects that can apply custom classes, widths and styles to any column matching that objects index. If used this configuration array must be the same length as the col-count integer. The styles object is the same format used by the ngStyle directive in angular 4
@@ -77,23 +77,23 @@ The grid can be configured to not set express widths and instead apply user sele
 
 ### `classes-config`
 **Type:**
+
 ```ts
-  {
+{
     container?:string | string[],
     row?:string | string[],
     col?:string | string[]
-  }
+}
 ```
-<br>   
+
 **Default:**
-```ts
+```js
   {
     container:'simple-grid-container',
     row:'simple-grid-row',
     col:'simple-grid-col'
   }
 ```
-<br>
 **Description:** This object can be used to over wright simple grid's default container, row and column classes                
 
 
@@ -106,7 +106,6 @@ The grid can be configured to not set express widths and instead apply user sele
   containerStyle?:Object
 }
 ```
-<br>   
 **Default:** `null`
 <br>
 **Description:** Each of the bound style objects will be applied to the column, row and container elements of the grid. Each of the styles objects are the same format used by the ngStyle directive in Angular 4
