@@ -1,4 +1,6 @@
 #Angular 4 Simple Grid
+
+
 [See Project Demo here](https://slangberg.github.io/ng-simple-grid/)
 
 This project is a component that allows a simple way to generate fully responsive easily scaleable row and column layout grids without the use of flex-box. This grid layout can be configured in  a number of different ways which allow for dynamic javascript based styling along with dynamic classes controls
@@ -60,7 +62,7 @@ The grid can be configured to not set express widths and instead apply user sele
 
 ### `col-config`
 **Type:**
-```js
+```ts
 [{
   class?: string | string[],
   percent?:number,
@@ -75,7 +77,7 @@ The grid can be configured to not set express widths and instead apply user sele
 
 ### `classes-config`
 **Type:**
-```js
+```ts
   {
     container?:string | string[],
     row?:string | string[],
@@ -84,7 +86,7 @@ The grid can be configured to not set express widths and instead apply user sele
 ```
 <br>   
 **Default:**
-```js
+```ts
   {
     container:'simple-grid-container',
     row:'simple-grid-row',
