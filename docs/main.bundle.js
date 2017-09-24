@@ -20,7 +20,7 @@ webpackEmptyAsyncContext.id = "../../../../../src/$$_gendir lazy recursive";
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<header class=\"clr\">\n  <h1>Angular 4 Simple Grid</h1>\n  <a class=\"git-link\" href=\"https://github.com/slangberg/ng-simple-grid\" alt=\"go to github\" title=\"Go To Repo\">\n    <i class=\"fa fa-github\" aria-hidden=\"true\"></i>\n  </a>\n</header>\n<div class=\"demo-page\">\n  <form class=\"demo-controls\">\n    <div class=\"control-row\">\n      <label>Colums</label>\n      <input type=\"number\" name=\"Colums\" [(ngModel)]=\"divderCount\" min=\"1\" max=\"12\">\n    </div>\n    <div class=\"control-row\">\n      <input type=\"checkbox\" [(ngModel)]=\"usingColConfig\" name=\"userColConfig\" (click)=\"usesColConfig()\">\n      <label>Use Coloum Config</label>\n    </div>\n    <div class=\"control-row\">\n      <input type=\"checkbox\" [(ngModel)]=\"usingGridStyle\" name=\"usingGridStyle\" (click)=\"usesGridStyle()\">\n      <label>Use Grid Style Config</label>\n    </div>\n    <div class=\"control-row\">\n      <input type=\"checkbox\" [(ngModel)]=\"usingColStyle\" name=\"usingColStyle\" (click)=\"useSampleColStyle()\">\n      <label>Use Column Style Config</label>\n    </div>\n    <div class=\"control-row\">\n      <input type=\"checkbox\" [(ngModel)]=\"usingRowStyle\" name=\"usingRowStyle\" (click)=\"useSampleRowStyle()\">\n      <label>Use Row Style Config</label>\n    </div>\n    <div class=\"control-row\">\n        <input type=\"checkbox\" [(ngModel)]=\"usingClassConfig\" name=\"usingClassConfig\" (click)=\"useClassConfig()\">\n      <label>Use Grid Class Config</label>\n    </div>\n    <h2 class=\"config-head\">Active Configs</h2>\n    <pre>\n      <code>\n        {{sampleConfigObject | json | outputTrim}}\n      </code>\n    </pre>\n  </form>\n  <div class=\"grid-holder clr\">\n\n    <div class=\"demo-container\">\n      <simple-grid\n      [col-config]=\"sampleConfigObject.colConfig\"\n      [col-count]=\"divderCount\"\n      [source-list]=\"sampleList\"\n      [use-percent]=\"isPercent\"\n      [grid-style-config]=\"sampleConfigObject.gridStyle\"\n      [col-style]=\"sampleConfigObject.colStyle\"\n      [row-style]=\"sampleConfigObject.rowStyle\"\n      [classes-config]=\"sampleConfigObject.classConfig\"\n      (onItemClick)=\"onClickItem($event)\"\n      >\n        <ng-template let-item=\"item\" let-index=\"index\">\n          <sample-cell [item]=\"item\"></sample-cell>\n        </ng-template>\n      </simple-grid>\n    </div>\n  </div>\n</div>\n"
+module.exports = "<div id=\"page-box\" [class.menu-open]=\"menuOpen\">\n\n  <header class=\"clr\">\n    <span class=\"menu-toggle\" (click)=\"toggleMenu()\">\n      <i class=\"fa fa-sliders\"></i>\n    </span><h1>Angular 4 Simple Grid</h1>\n    <a class=\"git-link\" href=\"https://github.com/slangberg/ng-simple-grid\" alt=\"go to github\" title=\"Go To Repo\">\n     <i class=\"fa fa-github\" aria-hidden=\"true\"></i>\n    </a>\n  </header>\n  <div class=\"demo-page\">\n    <form class=\"demo-controls\">\n      <div class=\"control-row count-row\">\n        <input type=\"number\" name=\"Colums\" [(ngModel)]=\"divderCount\" min=\"1\" max=\"12\">\n        <label>Column Count</label>\n      </div>\n      <div class=\"control-row\">\n        <input type=\"checkbox\" [(ngModel)]=\"usingColConfig\" name=\"userColConfig\" (click)=\"usesColConfig()\">\n        <label>Use Column Config</label>\n        <pre *ngIf=\"usingColConfig\">\n          <code >\n            {{sampleConfigObject.colConfig | json | outputTrim}}\n          </code>\n        </pre>\n      </div>\n      <div class=\"control-row\">\n        <input type=\"checkbox\" [(ngModel)]=\"usingGridStyle\" name=\"usingGridStyle\" (click)=\"usesGridStyle()\">\n        <label>Use Grid Style Config</label>\n        <pre *ngIf=\"usingGridStyle\">\n          <code >\n            {{sampleConfigObject.gridStyle | json | outputTrim}}\n          </code>\n        </pre>\n      </div>\n      <div class=\"control-row\">\n        <input type=\"checkbox\" [(ngModel)]=\"usingColStyle\" name=\"usingColStyle\" (click)=\"useSampleColStyle()\">\n        <label>Use Column Style Config</label>\n        <pre *ngIf=\"usingColStyle\">\n          <code >\n            {{sampleConfigObject.colStyle | json | outputTrim}}\n          </code>\n        </pre>\n      </div>\n      <div class=\"control-row\">\n        <input type=\"checkbox\" [(ngModel)]=\"usingRowStyle\" name=\"usingRowStyle\" (click)=\"useSampleRowStyle()\">\n        <label>Use Row Style Config</label>\n        <pre *ngIf=\"usingRowStyle\">\n          <code >\n            {{sampleConfigObject.rowStyle | json | outputTrim}}\n          </code>\n        </pre>\n      </div>\n      <div class=\"control-row\">\n          <input type=\"checkbox\" [(ngModel)]=\"usingClassConfig\" name=\"usingClassConfig\" (click)=\"useClassConfig()\">\n        <label>Use Grid Class Config</label>\n        <pre *ngIf=\"usingClassConfig\">\n          <code >\n            {{sampleConfigObject.classConfig | json | outputTrim}}\n          </code>\n        </pre>\n      </div>\n    </form>\n    <div class=\"grid-holder clr\">\n\n      <div class=\"demo-container\">\n        <simple-grid\n        [col-config]=\"sampleConfigObject.colConfig\"\n        [col-count]=\"divderCount\"\n        [source-list]=\"sampleList\"\n        [use-percent]=\"isPercent\"\n        [grid-style-config]=\"sampleConfigObject.gridStyle\"\n        [col-style]=\"sampleConfigObject.colStyle\"\n        [row-style]=\"sampleConfigObject.rowStyle\"\n        [classes-config]=\"sampleConfigObject.classConfig\"\n        (onItemClick)=\"onClickItem($event)\"\n        >\n          <ng-template let-item=\"item\" let-index=\"index\">\n            <sample-cell [item]=\"item\"></sample-cell>\n          </ng-template>\n        </simple-grid>\n      </div>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -32,7 +32,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "* {\n  box-sizing: border-box; }\n\nh1 {\n  font-family: 'Fjalla One', sans-serif;\n  margin: 0;\n  font-size: 25px;\n  float: left; }\n\nh2 {\n  font-family: 'Fjalla One', sans-serif;\n  margin: 5px 0;\n  font-size: 17px; }\n\n.clr:after {\n  visibility: hidden;\n  display: block;\n  font-size: 0;\n  content: \" \";\n  clear: both;\n  height: 0; }\n\nheader {\n  background: #ededed;\n  padding: 10px;\n  border-bottom: 3px solid #8e8e8e;\n  box-shadow: 5px 0px 5px rgba(0, 0, 0, 0.4); }\n\n.git-link {\n  font-family: 'Fjalla One', sans-serif;\n  display: inline-block;\n  float: right;\n  color: #000 !important;\n  font-size: 25px;\n  text-decoration: none; }\n\n.demo-container {\n  border-radius: 5px;\n  border: 3px solid #8e8e8e;\n  padding: 4px;\n  margin: 10px; }\n\n.demo-page {\n  position: relative;\n  width: 100%; }\n\n.demo-controls {\n  float: left;\n  width: 300px;\n  min-height: calc(100vh - 31px);\n  padding: 10px; }\n  .demo-controls label {\n    font-weight: bold;\n    font-size: 12px; }\n  .demo-controls .control-row {\n    padding-bottom: 5px; }\n  .demo-controls pre {\n    border: 1px solid #8e8e8e; }\n  .demo-controls code {\n    tab-width: 2;\n    white-space: pre-wrap; }\n\n.grid-holder {\n  border-left: 1px solid #8e8e8e;\n  float: left;\n  width: calc(100% - 300px);\n  min-height: calc(100vh - 31px); }\n", ""]);
+exports.push([module.i, "* {\n  box-sizing: border-box; }\n\n#page-box {\n  overflow: hidden;\n  width: 100%; }\n\nh1 {\n  font-family: 'Fjalla One', sans-serif;\n  margin: 0;\n  font-size: 25px;\n  float: left; }\n\nh2 {\n  font-family: 'Fjalla One', sans-serif;\n  margin: 5px 0;\n  font-size: 17px; }\n\n.clr:after {\n  visibility: hidden;\n  display: block;\n  font-size: 0;\n  content: \" \";\n  clear: both;\n  height: 0; }\n\nheader {\n  background: #ededed;\n  padding: 10px;\n  border-bottom: 3px solid #8e8e8e;\n  box-shadow: 5px 0px 5px rgba(0, 0, 0, 0.4); }\n\n.git-link {\n  font-family: 'Fjalla One', sans-serif;\n  position: absolute;\n  right: 10px;\n  top: 0px;\n  color: #000 !important;\n  font-size: 40px;\n  text-decoration: none; }\n\n.menu-toggle {\n  font-size: 25px; }\n\n.demo-container {\n  border-radius: 5px;\n  border: 3px solid #8e8e8e;\n  padding: 4px;\n  margin: 10px; }\n\n.demo-page {\n  position: relative;\n  width: 100%; }\n\n.demo-controls {\n  position: absolute;\n  z-index: 2;\n  background: #FFF;\n  padding: 0;\n  transition: left 300ms ease-in;\n  left: -300px;\n  border-right: 3px solid #8e8e8e;\n  min-height: calc(100vh - 31px); }\n  .demo-controls label {\n    font-weight: 600; }\n  .demo-controls .control-row {\n    padding: 10px 20px 10px 10px;\n    border-bottom: 1px solid #CCC; }\n  .demo-controls input[type=number] {\n    font-size: 14px;\n    padding: 2px; }\n  .demo-controls input[type=checkbox] {\n    font-size: 30px;\n    position: relative;\n    top: -1px; }\n  .demo-controls pre {\n    font-size: 11px;\n    line-height: 11px;\n    background: #FFF;\n    border: 2px solid #8e8e8e;\n    font-weight: 600; }\n\n.grid-holder {\n  border-left: 1px solid #8e8e8e;\n  float: left;\n  width: calc(100% - 260px);\n  position: relative;\n  z-index: 1;\n  width: 100%;\n  border: none;\n  transition: width 300ms ease-in;\n  min-height: calc(100vh - 31px); }\n\n.menu-open .demo-controls {\n  left: 0; }\n\n.menu-open .grid-holder {\n  -webkit-transform: translateX(260px);\n          transform: translateX(260px);\n  width: calc(100vw - 270px); }\n\n.menu-toggle {\n  z-index: 3;\n  padding-right: 12px;\n  position: absolute;\n  line-height: 28px; }\n\n@media only screen and (min-width: 830px) {\n  .demo-controls {\n    left: 0 !important; }\n  .grid-holder {\n    -webkit-transform: translateX(260px) !important;\n            transform: translateX(260px) !important;\n    width: calc(100vw - 270px) !important; }\n  .menu-toggle {\n    display: none; }\n  header .git-link {\n    display: block; } }\n\n@media only screen and (max-width: 830px) {\n  header .git-link {\n    display: block; }\n  h1 {\n    text-align: center;\n    float: none;\n    width: 100%; } }\n\n@media only screen and (max-width: 730px) {\n  .grid-holder {\n    -webkit-transform: none !important;\n            transform: none !important;\n    width: 100% !important; }\n  h1 {\n    text-align: center;\n    float: none;\n    width: 100%; } }\n", ""]);
 
 // exports
 
@@ -76,6 +76,10 @@ var AppComponent = (function () {
         this.sampleColStyle = {};
         this.sampleRowStyle = {};
         this.activeConfigs = null;
+        this.menuOpen = false;
+        this.toggleMenu = function () {
+            _this.menuOpen = _this.menuOpen = !_this.menuOpen;
+        };
         this.setUpConfigs = function () {
             _this.sampleConfigObject = {
                 colConfig: [],
@@ -157,42 +161,42 @@ var AppComponent = (function () {
             {
                 "_id": "5976a13f6653386837489bb2",
                 "index": 0,
-                "picture": "http://lorempixel.com/400/200/?random=0",
+                "picture": "assets/demo-1.jpeg",
                 "age": 38,
                 "name": "Gross Casey"
             },
             {
                 "_id": "5976a13f0941fa1842865e88",
                 "index": 1,
-                "picture": "http://lorempixel.com/400/200/?random=1",
+                "picture": "assets/demo-1.jpeg",
                 "age": 37,
                 "name": "Nash Bruce"
             },
             {
-                "_id": "5976a13f8364ee70b2b5555e",
+                "_id": "assets/demo-3.jpeg",
                 "index": 2,
-                "picture": "http://lorempixel.com/400/200/?random=2",
+                "picture": "assets/demo-1.jpeg",
                 "age": 31,
                 "name": "Melba Estrada"
             },
             {
                 "_id": "5976a13fab2cdc560a39a7cc",
                 "index": 3,
-                "picture": "http://lorempixel.com/400/200/?random=3",
+                "picture": "assets/demo-1.jpeg",
                 "age": 21,
                 "name": "Cheri Mosley"
             },
             {
                 "_id": "5976a13f8790d513716e168e",
                 "index": 4,
-                "picture": "http://lorempixel.com/400/200/?random=4",
+                "picture": "assets/demo-1.jpeg",
                 "age": 28,
                 "name": "Ofelia Aguirre"
             },
             {
                 "_id": "5976a13fce491181e33b0686",
                 "index": 5,
-                "picture": "http://lorempixel.com/400/200/?random=5",
+                "picture": "assets/demo-1.jpeg",
                 "age": 28,
                 "name": "Juliette Booth"
             }
@@ -226,12 +230,14 @@ AppComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__simple_grid_simple_grid_module__ = __webpack_require__("../../../../../src/app/simple-grid/simple-grid.module.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__sample_cell_sample_cell_component__ = __webpack_require__("../../../../../src/app/sample-cell/sample-cell.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__output_trim_pipe__ = __webpack_require__("../../../../../src/app/output-trim.pipe.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__toggle_input_toggle_input_component__ = __webpack_require__("../../../../../src/app/toggle-input/toggle-input.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -250,7 +256,8 @@ AppModule = __decorate([
         declarations: [
             __WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */],
             __WEBPACK_IMPORTED_MODULE_6__sample_cell_sample_cell_component__["a" /* SampleCellComponent */],
-            __WEBPACK_IMPORTED_MODULE_7__output_trim_pipe__["a" /* OutputTrimPipe */]
+            __WEBPACK_IMPORTED_MODULE_7__output_trim_pipe__["a" /* OutputTrimPipe */],
+            __WEBPACK_IMPORTED_MODULE_8__toggle_input_toggle_input_component__["a" /* ToggleInputComponent */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -311,7 +318,7 @@ var OutputTrimPipe = (function () {
     function OutputTrimPipe() {
     }
     OutputTrimPipe.prototype.transform = function (value, args) {
-        console.log(value);
+        // console.log(value)
         return value.slice(1, -1);
     };
     return OutputTrimPipe;
@@ -669,6 +676,67 @@ SimpleGridModule = __decorate([
 ], SimpleGridModule);
 
 //# sourceMappingURL=simple-grid.module.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/toggle-input/toggle-input.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/toggle-input/toggle-input.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  toggle-input works!\n</p>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/toggle-input/toggle-input.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ToggleInputComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var ToggleInputComponent = (function () {
+    function ToggleInputComponent() {
+    }
+    ToggleInputComponent.prototype.ngOnInit = function () {
+    };
+    return ToggleInputComponent;
+}());
+ToggleInputComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        selector: 'toggle-input',
+        template: __webpack_require__("../../../../../src/app/toggle-input/toggle-input.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/toggle-input/toggle-input.component.css")]
+    }),
+    __metadata("design:paramtypes", [])
+], ToggleInputComponent);
+
+//# sourceMappingURL=toggle-input.component.js.map
 
 /***/ }),
 
