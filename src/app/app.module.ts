@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import {SimpleGridModule} from './simple-grid/simple-grid.module';
 import {SampleCellComponent} from './sample-cell/sample-cell.component';
 import { OutputTrimPipe } from './output-trim.pipe';
+import { ToggleInputComponent } from './toggle-input/toggle-input.component';
 @NgModule({
   declarations: [
     AppComponent,
     SampleCellComponent,
-    OutputTrimPipe
+    OutputTrimPipe,
+    ToggleInputComponent
   ],
   imports: [
     BrowserModule,

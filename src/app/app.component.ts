@@ -24,52 +24,57 @@ export class AppComponent {
   sampleRowStyle:Object = {}
   activeConfigs:any = null;
   sampleConfigObject: any;
+  menuOpen:boolean = false;
   constructor(){
     this.setUpConfigs();
     this.sampleList  = [
       {
         "_id": "5976a13f6653386837489bb2",
         "index": 0,
-        "picture": "http://lorempixel.com/400/200/?random=0",
+        "picture": "assets/demo-1.jpeg",
         "age": 38,
         "name": "Gross Casey"
       },
       {
         "_id": "5976a13f0941fa1842865e88",
         "index": 1,
-        "picture": "http://lorempixel.com/400/200/?random=1",
+        "picture": "assets/demo-1.jpeg",
         "age": 37,
         "name": "Nash Bruce"
       },
       {
-        "_id": "5976a13f8364ee70b2b5555e",
+        "_id": "assets/demo-3.jpeg",
         "index": 2,
-        "picture": "http://lorempixel.com/400/200/?random=2",
+        "picture": "assets/demo-1.jpeg",
         "age": 31,
         "name": "Melba Estrada"
       },
       {
         "_id": "5976a13fab2cdc560a39a7cc",
         "index": 3,
-        "picture": "http://lorempixel.com/400/200/?random=3",
+        "picture": "assets/demo-1.jpeg",
         "age": 21,
         "name": "Cheri Mosley"
       },
       {
         "_id": "5976a13f8790d513716e168e",
         "index": 4,
-        "picture": "http://lorempixel.com/400/200/?random=4",
+        "picture": "assets/demo-1.jpeg",
         "age": 28,
         "name": "Ofelia Aguirre"
       },
       {
         "_id": "5976a13fce491181e33b0686",
         "index": 5,
-        "picture": "http://lorempixel.com/400/200/?random=5",
+        "picture": "assets/demo-1.jpeg",
         "age": 28,
         "name": "Juliette Booth"
       }
     ]
+  }
+
+  toggleMenu = () => {
+    this.menuOpen = this.menuOpen = !this.menuOpen;
   }
 
 

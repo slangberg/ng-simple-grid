@@ -80,9 +80,9 @@ The grid can be configured to not set express widths and instead apply user sele
 
 ```ts
 {
-    container?:string | string[],
-    row?:string | string[],
-    col?:string | string[]
+    container?:string || string[],
+    row?:string || string[],
+    col?:string || string[]
 }
 ```
 

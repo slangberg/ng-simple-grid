@@ -6,7 +6,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class OutputTrimPipe implements PipeTransform {
 
   transform(value: any, args?: any): any {
-    console.log(value)
+    // console.log(value)
     return value.slice(1, -1);
   }
 

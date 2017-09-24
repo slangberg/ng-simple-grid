@@ -2,6 +2,12 @@
   box-sizing: border-box;
 }
 
+#page-box {
+  overflow: hidden;
+  width: 100%;
+}
+
+
 h1 {
   font-family: 'Fjalla One', sans-serif;
   margin: 0;
@@ -32,12 +38,19 @@ header {
 
 .git-link {
   font-family: 'Fjalla One', sans-serif;
-  display: inline-block;
-  float: right;
-  color: #000!important;
-  font-size: 25px;
+  position: absolute;
+  right: 10px;
+  top: 0px;
+  color: #000 !important;
+  font-size: 40px;
   text-decoration: none;
 }
+
+.menu-toggle {
+  font-size: 25px;
+}
+
+
 .demo-container {
   border-radius: 5px;
   border: 3px solid #8e8e8e;
@@ -52,30 +65,114 @@ header {
 }
 
 .demo-controls {
-  float: left;
-  width: 300px;
+  position: absolute;
+  z-index: 2;
+  background: #FFF;
+  padding: 0;
+  transition: left 300ms ease-in;
+  left: -300px;
+  border-right: 3px solid #8e8e8e;
   min-height: calc(100vh - 31px);
-  padding: 10px;
-  label{
-    font-weight: bold;
-    font-size: 12px;
+  label {
+    font-weight: 600;
+    // position: relative;
+    // top:2px;
   }
   .control-row {
-    padding-bottom: 5px;
+    padding: 10px 20px 10px 10px;
+    border-bottom: 1px solid #CCC;
+    // padding: 5px 10px;
   }
+
+  input[type=number] {
+    font-size: 14px;
+    padding: 2px;
+  }
+
+  input[type=checkbox] {
+    font-size: 30px;
+    position: relative;
+    top: -1px;
+  }
+
   pre {
-    border: 1px solid #8e8e8e;
-  }
-  code {
-    tab-width: 2;
-    white-space: pre-wrap;
-    // border: 1px solid;
+    font-size: 11px;
+    line-height: 11px;
+    background: #FFF;
+    border: 2px solid #8e8e8e;
+    font-weight: 600;
   }
 }
+
 
 .grid-holder {
   border-left: 1px solid #8e8e8e;
   float: left;
-  width:calc(100% - 300px);
+  width:calc(100% - 260px);
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  border: none;
+  transition: width 300ms ease-in;
   min-height: calc(100vh - 31px);
+}
+
+.menu-open .demo-controls {
+  left: 0;
+}
+
+.menu-open .grid-holder {
+  transform: translateX(260px);
+  width: calc(100vw - 270px);
+}
+
+.menu-toggle {
+  z-index:3;
+  padding-right:12px;
+  position: absolute;
+  line-height: 28px;
+}
+
+
+
+@media only screen and (min-width: 830px) {
+  .demo-controls {
+    left: 0!important;
+  }
+  .grid-holder {
+    transform: translateX(260px)!important;
+    width: calc(100vw - 270px)!important;
+  }
+  .menu-toggle {
+    display: none;
+  }
+  header .git-link{
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 830px) {
+  header .git-link{
+    display: block;
+  }
+
+  h1 {
+    text-align: center;
+    float: none;
+    width: 100%;
+  }
+}
+
+
+@media only screen and (max-width: 730px) {
+  .grid-holder {
+    transform:none!important;
+    width: 100%!important;
+  }
+
+  h1 {
+    text-align: center;
+    float: none;
+    width: 100%;
+  }
 }
