@@ -28,21 +28,21 @@ export class AppComponent {
     this.setUpConfigs();
     this.sampleList  = [
       {
-        "_id": "5976a13f6653386837489bb2",
+        "_id": "5976a13f665",
         "index": 0,
         "picture": "https://slangberg.github.io/ng-simple-grid/assets/demo-1.jpeg",
         "age": 38,
         "name": "Gross Casey"
       },
       {
-        "_id": "5976a13f0941fa1842865e88",
+        "_id": "5976a13f0941",
         "index": 1,
-        "picture": "https://slangberg.github.io/ng-simple-grid/assets/demo-1.jpeg",
+        "picture": "https://slangberg.github.io/ng-simple-grid/assets/demo-2.jpeg",
         "age": 37,
         "name": "Nash Bruce"
       },
       {
-        "_id": "https://slangberg.github.io/ng-simple-grid/assets/demo-3.jpeg",
+        "_id": "54egsfgfs",
         "index": 2,
         "picture": "https://slangberg.github.io/ng-simple-grid/assets/demo-1.jpeg",
         "age": 31,
@@ -51,7 +51,7 @@ export class AppComponent {
       {
         "_id": "5976a13fab2cdc560a39a7cc",
         "index": 3,
-        "picture": "https://slangberg.github.io/ng-simple-grid/assets/demo-1.jpeg",
+        "picture": "https://slangberg.github.io/ng-simple-grid/assets/demo-2.jpeg",
         "age": 21,
         "name": "Cheri Mosley"
       },
@@ -65,7 +65,7 @@ export class AppComponent {
       {
         "_id": "5976a13fce491181e33b0686",
         "index": 5,
-        "picture": "https://slangberg.github.io/ng-simple-grid/assets/demo-1.jpeg",
+        "picture": "https://slangberg.github.io/ng-simple-grid/assets/demo-2.jpeg",
         "age": 28,
         "name": "Juliette Booth"
       }
