@@ -751,7 +751,8 @@ ToggleInputComponent = __decorate([
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 // The file contents for the current environment will overwrite these during build.
 var environment = {
-    production: false
+    production: false,
+    assetPath: 'https://slangberg.github.io/ng-simple-grid/'
 };
 //# sourceMappingURL=environment.js.map
 

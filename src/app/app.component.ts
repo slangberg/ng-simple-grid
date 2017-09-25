@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { IColConfig, IGridStyle, IClassConfig} from './interfaces';
 
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
